@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}services{% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #343a40;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .menu a {
+      padding: 5px 10px;
+    }
+
+    .navbar .menu input[type="text"] {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .navbar .menu button {
+      padding: 5px 10px;
+      border: none;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Service Page */
+    .service-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+      max-width: 1200px;
+      margin: 100px auto; /* Adjust margin to account for navbar */
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .service-section {
+      flex: 1;
+      text-align: center;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .male-section {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .female-section {
+      background-color: #e83e8c;
+      color: #fff;
+    }
+
+    .service-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service-section p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .service-section a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      border-radius: 4px;
+      transition: 0.3s ease;
+    }
+
+    .service-section a:hover {
+      background-color: #fff;
+      color: inherit;
+    }
+
+    .service-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .service-container {
+        flex-direction: column;
+      }
+
+      .service-section {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">SShop</div>
+    <div class="menu">
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+        <input type="text" placeholder="Search">
+      <button>Search</button>
+    </div>
+  </div>
+
+  <!-- Service Container -->
+  <div class="service-container">
+    <!-- Male Section -->
+    <div class="service-section male-section">
+      <h2>Male Services</h2>
+      <p>Explore services tailored for men.</p>
+      <a href="/male_services">View Male Services</a>
+    </div>
+
+    <!-- Female Section -->
+    <div class="service-section female-section">
+      <h2>Female Services</h2>
+      <p>Explore services tailored for women.</p>
+      <a href="/female_services">View Female Services</a>
+    </div>
+  </div>
+</body>
+</html>
+
+{% endblock body %}
